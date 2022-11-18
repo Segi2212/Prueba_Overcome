@@ -63,7 +63,7 @@ a {
 
 .boton {
     height: 40px;
-    width: 100px;
+    width: 160px;
     background-color: var(--Amarillo);
     border-radius: 5px;
     display: flex;
@@ -73,6 +73,8 @@ a {
     font-weight: 700;
     color: var(--Azul);
     margin-bottom: 40px;
+    border: 0;
+    font-size: 18px;
 }
 
 .boton:hover {

@@ -13,14 +13,16 @@ if (isset($_GET['submit'])) {
         echo "<script>location.href = 'CrearCuenta.php';</script>";
     }
     else{
-        $respuesta = $APIConn->comprobarUsuario($usuario,$contrasena);
-        if($respuesta > 0){
-            echo "<script>location.href = 'Dashboard.php';</script>";
+        $respuesta = $APIConn->crearUsuario($usuario,$contrasena);
+        if($respuesta = true){
+            echo "<script>alert('Cuenta creada con exito. Puede iniciar sesión');</script>";
+            echo "<script>location.href = 'index.php';</script>";
         }
-        echo "<script>alert('Datos incorrectos');</script>";
-        echo "<script>location.href = 'index.php';</script>";
+        echo "<script>alert('Hubo un problema, intente más tarde');</script>";
+        echo "<script>location.href = 'CrearCuenta.php';</script>";
     }
 }
+
 ?>
 
 
@@ -39,11 +41,11 @@ if (isset($_GET['submit'])) {
 
     <div class="cont">
         <form class="contenedor" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="get">
-            <p class="titulo">Bienvenida/o</p>
+            <p class="titulo">¡Hola!</p>
             <input class="caja" type="text" name="usuario" placeholder="Usuario" required>
             <input class="caja" type="password" name="contrasena" placeholder="Contraseña" required>
-            <input class="boton" type="submit" name="submit" value="Ingresar">
-            <p class="recuperar">¿Aún no tienes una cuenta? <a href="CrearCuenta.php">Crea una</a></p>
+            <input class="boton" type="submit" name="submit" value="Crear cuenta">
+            <p class="recuperar">¿Ya tienes una cuenta? <a href="index.php">Ingresar</a></p>
         </form>
     </div>
 

@@ -61,6 +61,7 @@ if (isset($_GET['submit'])) {
             <br><br><br>
             <li><a href="Dashboard.php">Reportes</a></li>
             <li><a>Nuevo reporte</a></li>
+            <li><a href="Archivados.php">Archivados</a></li>
 
         </ul>
     </nav>

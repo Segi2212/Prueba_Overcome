@@ -65,9 +65,28 @@ class apiPruebaOvercome
         if ($proc) {
             return true;
         } else {
-            return false.$conn->error;
+            return false . $conn->error;
         }
         mysqli_close($conn);
+    }
+
+    function archivados()
+    {
+        include('Conexion.php');
+        $conn = new mysqli($HOST, $USUARIO, $CONTRASENA, $BASE);
+        $proc = mysqli_query($conn, "SELECT * FROM `tickets` WHERE `archivado` = 1");
+
+        $json = array();
+
+        while ($row = mysqli_fetch_array($proc)) {
+            $id = $row['id'];
+            $titulo = $row['titulo'];
+            $descripcion = $row['descripcion'];
+            $json[] = array('id' => $id, 'titulo' => $titulo, 'descripcion' => $descripcion);
+        }
+
+        mysqli_close($conn);
+        return json_encode($json);
     }
     function modificar()
     {

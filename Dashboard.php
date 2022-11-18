@@ -53,6 +53,7 @@ function crearArreglo()
             <br><br><br>
             <li><a href="">Reportes</a></li>
             <li><a href="Nuevo.php">Nuevo reporte</a></li>
+            <li><a href="Archivados.php">Archivados</a></li>
 
         </ul>
     </nav>

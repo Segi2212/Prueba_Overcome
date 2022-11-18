@@ -286,19 +286,46 @@ nav #check {
     font-size: 15px;
 }
 
-.nuevo_ticket form textarea{
+.nuevo_ticket form textarea {
     width: calc(100% - 60px);
     margin: 5px auto 0 auto;
     outline: none;
     padding: 5px;
     font-size: 15px;
 }
-.nuevo_ticket form #enviar{
+
+.nuevo_ticket form #enviar {
     width: 150px;
     margin: auto;
 }
 
 /*Nuevo ticket*/
+
+/*Archivados*/
+.listaArchivados {
+    width: 88%;
+    float: right;
+    margin-top: 20px;
+}
+
+.listado_arc {
+    width: 88%;
+    float: right;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 2fr 5fr;
+    font-family: var(--Montserrat);
+}
+.archivados{
+    width: 88%;
+    float: right;
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 1fr 2fr 5fr;
+    font-family: var(--Hind);
+}
+
+/*Archivados*/
 
 
 

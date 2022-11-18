@@ -33,8 +33,8 @@ if (isset($_GET['submit'])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Login</title>
+    <link rel="stylesheet" href="style1.css">
+    <title>Crear cuenta</title>
 </head>
 
 <body>
@@ -42,7 +42,7 @@ if (isset($_GET['submit'])) {
     <div class="cont">
         <form class="contenedor" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="get">
             <p class="titulo">¡Hola!</p>
-            <input class="caja" type="text" name="usuario" placeholder="Usuario" required>
+            <input class="caja" type="name" name="usuario" placeholder="Nombre" required>
             <input class="caja" type="password" name="contrasena" placeholder="Contraseña" required>
             <input class="boton" type="submit" name="submit" value="Crear cuenta">
             <p class="recuperar">¿Ya tienes una cuenta? <a href="index.php">Ingresar</a></p>

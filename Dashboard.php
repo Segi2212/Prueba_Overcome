@@ -22,6 +22,13 @@ function crearArreglo()
     echo "$arreglo";
 }
 
+function logear(String $a)
+{
+    //echo "console.log(" . $a . ")";
+    $_SESSION['id']  = $a;
+    echo "location.href = 'Modificar.php';";
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -219,11 +226,17 @@ function crearArreglo()
                 carta2.appendChild(cartaProceso)
                 cartaProceso.appendChild(contTop)
                 cartaProceso.appendChild(contBot)
+                cartaProceso.addEventListener('click', function() {
+                    abrir(array[i]["id"])
+                })
             } else if (array[i]["etapa"] == "Atendido") {
                 var carta3 = document.getElementById("cont_cartas3"); //este es el contenedor padre
                 carta3.appendChild(cartaAtendido)
                 cartaAtendido.appendChild(contTop)
                 cartaAtendido.appendChild(contBot)
+                cartaAtendido.addEventListener('click', function() {
+                    abrir(array[i]["id"])
+                })
             }
 
 
@@ -234,6 +247,8 @@ function crearArreglo()
     }
 
     function abrir(id) {
-        console.log("El id es: " + id)
+
+        localStorage.setItem("id", id);
+        location.href = "Modificar.php";
     }
 </script>
